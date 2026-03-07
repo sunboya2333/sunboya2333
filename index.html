@@ -5,100 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sun Boya | Portfolio</title>
     <style>
-        /* 1. 核心美学：等宽字体与极简配色 */
+        /* 这里保持你原来的所有 CSS 样式不变 */
         :root {
             --bg-color: #fcfcfc;
             --text-color: #1a1a1a;
             --line-color: #e0e0e0;
             --accent-color: #666;
-            /* 选用类似参考图的等宽字体族 */
             --font-main: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Console", monospace;
         }
-
         * { box-sizing: border-box; }
-
         body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
+            margin: 0; padding: 0; height: 100%;
             background-color: var(--bg-color);
             color: var(--text-color);
             font-family: var(--font-main);
-            font-size: 13px; /* 参考图文字较小，显得精致 */
-            line-height: 1.5;
-            overflow: hidden;
+            font-size: 13px; line-height: 1.5; overflow: hidden;
         }
-
-        /* 2. 布局结构 */
-        .container {
-            display: flex;
-            height: 100vh;
-            width: 100vw;
-        }
-
-        /* 通用列样式 */
-        .column {
-            height: 100%;
-            border-right: 1px solid var(--line-color);
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* 第一列：20% 宽度，固定 */
-        .col-1 {
-            flex: 0 0 22%;
-            padding: 30px;
-        }
-
-        /* 第二列：53% 宽度，滚动 */
-        .col-2 {
-            flex: 0 0 53%;
-            overflow-y: auto;
-            padding: 30px;
-        }
-
-        /* 第三列：剩余宽度，滚动 */
-        .col-3 {
-            flex: 1;
-            overflow-y: auto;
-            padding: 30px;
-            border-right: none;
-        }
-
-        /* 3. 装饰性元素 */
+        .container { display: flex; height: 100vh; width: 100vw; }
+        .column { height: 100%; border-right: 1px solid var(--line-color); display: flex; flex-direction: column; }
+        .col-1 { flex: 0 0 22%; padding: 30px; }
+        .col-2 { flex: 0 0 53%; overflow-y: auto; padding: 30px; }
+        .col-3 { flex: 1; overflow-y: auto; padding: 30px; border-right: none; }
         h1 { font-size: 18px; font-weight: normal; margin: 0 0 40px 0; text-transform: uppercase; }
         h2 { font-size: 14px; font-weight: normal; margin: 0 0 30px 0; color: var(--accent-color); text-transform: uppercase; border-bottom: 1px solid var(--line-color); padding-bottom: 5px; }
-        
         .divider { width: 100%; height: 1px; background: var(--line-color); margin: 20px 0; }
-
-        /* 4. 内容块样式 */
         .profile-section { margin-bottom: 40px; }
-        .contact-info a { display: block; color: var(--text-color); text-decoration: underline; margin-bottom: 5px; }
-
-        /* 文章卡片（模仿参考图） */
         .article-card { margin-bottom: 60px; }
         .image-placeholder {
-            width: 100%;
-            aspect-ratio: 3 / 2;
-            background-color: #f0f0f0;
-            border: 1px solid var(--line-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 15px;
+            width: 100%; aspect-ratio: 3 / 2; background-color: #f0f0f0; border: 1px solid var(--line-color);
+            display: flex; align-items: center; justify-content: center; margin-bottom: 15px;
         }
         .image-placeholder::after { content: "IMAGE"; color: #ccc; font-size: 10px; }
-        
         .article-title { font-size: 14px; margin: 10px 0; font-weight: bold; }
         .article-meta { font-size: 11px; color: var(--accent-color); margin-bottom: 10px; }
         .article-excerpt { color: var(--accent-color); text-align: justify; }
-
-        /* 经历项 */
         .experience-item { margin-bottom: 30px; }
         .exp-date { font-size: 11px; color: var(--accent-color); display: block; margin-bottom: 5px; }
         .exp-title { font-weight: bold; margin-bottom: 5px; display: block; }
-
-        /* 自定义滚动条（更细更美观） */
         ::-webkit-scrollbar { width: 4px; }
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: #ddd; }
@@ -106,7 +49,9 @@
 </head>
 <body>
 
-<div class="column col-1">
+<div class="container">
+
+    <div class="column col-1">
         <h1>Sun Boya</h1>
         <div class="divider"></div>
         <div class="profile-section">
@@ -116,37 +61,20 @@
             <a href="https://www.instagram.com/sans_toit_/" target="_blank" style="color: black; text-decoration: underline;">Instagram</a>
         </div>
         <div class="article-excerpt">
-            这里写你的个人简介（法语/中文/英文）。
-            配合你那种 SANS TOIT NI LOI (无家无归) 的艺术风格，
-            建议文字排版保持左对齐。
+            SANS TOIT NI LOI. <br>
+            无家无归。
         </div>
         <div class="divider"></div>
-        <a href="mailto:hello@sunboya.fr" style="color: black; text-decoration: underline; cursor: pointer; text-transform: uppercase;">Contact</a>
-    </div>
-    
-        <div class="divider"></div>
-        <p style="text-decoration: underline; cursor: pointer;">CONTACT</p>
+        <a href="mailto:hello@sunboya.fr" style="color: black; text-decoration: underline; text-transform: uppercase;">Contact</a>
     </div>
 
     <div class="column col-2">
         <h2>Projects</h2>
-        
         <div class="article-card">
             <div class="image-placeholder"></div>
             <div class="article-title">1. Test Project</div>
             <div class="article-meta">Bark Barque Baroque, with John R. Nash</div>
-            <p class="article-excerpt">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta ex a porta blandit. Suspendisse feugiat justo at mauris molestie molestie.
-            </p>
-        </div>
-
-        <div class="article-card">
-            <div class="image-placeholder"></div>
-            <div class="article-title">2. Second Writing</div>
-            <div class="article-meta">CN / EN / FR</div>
-            <p class="article-excerpt">
-                Ut mattis urna sed sem pulvinar, vitae rutrum nulla ultrices. Curabitur laoreet erat et sapien venenatis luctus.
-            </p>
+            <p class="article-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
     </div>
 
@@ -155,25 +83,9 @@
         <div class="experience-item">
             <span class="exp-date">2023</span>
             <span class="exp-title">Vestibulum Euismod</span>
-            <p class="article-excerpt">Suspendisse Aenean Lectus</p>
-        </div>
-
-        <div class="divider"></div>
-
-        <h2>Employment</h2>
-        <div class="experience-item">
-            <span class="exp-date">2023 - 2024</span>
-            <span class="exp-title">Vestibulum Ultricies</span>
-            <p class="article-excerpt">Mauris Tristique Congue, Tellus, Suspendisse Aenean.</p>
-        </div>
-        
-        <div class="experience-item">
-            <span class="exp-date">2024</span>
-            <span class="exp-title">New Thoughts</span>
-            <p class="article-excerpt">这里可以写你关于工作和学习经历的深度思考，文字会自动换行并支持垂直滚动。</p>
+            <p class="article-excerpt">成长思考内容...</p>
         </div>
     </div>
-</div>
 
-</body>
+</div> </body>
 </html>
