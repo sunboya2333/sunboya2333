@@ -4,19 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sun Boya | Portfolio</title>
-
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;700&display=swap" rel="stylesheet">
     
-<style>
+
+
+    <style>
         :root {
             --bg-color: #fcfcfc;
             --text-color: #1a1a1a;
             --line-color: #e0e0e0;
-            --accent-color: #444444; /* 加深灰色，确保易读 */
-            
-            /* 设置字体变量 */
-            --font-header: 'Montserrat', sans-serif;
-            --font-body: 'Ubuntu', sans-serif;
-            --font-quote: 'Playfair Display', serif;
+            --accent-color: #444444; /* 深灰，保证易读 */
             --font-mono: 'Inconsolata', monospace;
         }
 
@@ -26,54 +23,65 @@
             margin: 0; padding: 0; height: 100%;
             background-color: var(--bg-color);
             color: var(--text-color);
-            font-family: var(--font-body); /* 全局使用 Ubuntu，清晰好读 */
+            font-family: var(--font-mono); /* 全部统一 */
             font-size: 14px; 
-            line-height: 1.6; 
+            line-height: 1.5; 
             overflow: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* 保持你的三栏固定布局不变 */
+        /* 布局逻辑完全保留 */
         .container { display: flex; height: 100vh; width: 100vw; }
         .column { height: 100%; border-right: 1px solid var(--line-color); display: flex; flex-direction: column; }
         .col-1 { flex: 0 0 22%; padding: 30px; }
         .col-2 { flex: 0 0 53%; overflow-y: auto; padding: 30px; }
         .col-3 { flex: 1; overflow-y: auto; padding: 30px; border-right: none; }
 
-        /* 标题使用 Montserrat，更有现代感 */
-        h1 { font-family: var(--font-header); font-size: 18px; font-weight: 700; margin: 0 0 40px 0; text-transform: uppercase; letter-spacing: 0.1em; color: #000; }
+        /* 标题层级 */
+        h1 { font-size: 20px; font-weight: 700; margin: 0 0 40px 0; text-transform: uppercase; letter-spacing: 0.05em; }
         h2 { 
-            font-family: var(--font-header); font-size: 13px; font-weight: 600; margin: 0 0 30px 0; 
+            font-size: 12px; font-weight: 400; margin: 0 0 30px 0; 
             color: var(--accent-color); text-transform: uppercase; border-bottom: 1px solid var(--line-color); 
-            padding-bottom: 5px; letter-spacing: 0.08em;
+            padding-bottom: 5px; letter-spacing: 0.1em;
         }
 
-        /* 文章标题加粗 */
-        .article-title { font-family: var(--font-header); font-size: 15px; margin: 10px 0; font-weight: 700; color: #000; }
+        /* 文章项目 */
+        .article-title { 
+            font-size: 16px; 
+            margin: 10px 0; 
+            font-weight: 700; 
+            color: #000; 
+            letter-spacing: -0.02em; /* 紧凑一点更有设计感 */
+        }
         
-        /* 文章 Meta 信息可以使用 Inconsolata 这种类似代码的字体，很有设计感 */
-        .article-meta { font-family: var(--font-mono); font-size: 11px; color: var(--accent-color); margin-bottom: 10px; }
+        .article-meta { 
+            font-size: 11px; 
+            color: var(--accent-color); 
+            margin-bottom: 10px; 
+            text-transform: uppercase;
+        }
         
-        /* 摘要部分：文字颜色加深至 #333，确保清晰 */
         .article-excerpt { 
             color: #333; 
             text-align: justify; 
-            font-weight: 300; /* 使用 Ubuntu 的轻量级字体，很优雅 */
+            font-weight: 400;
+            line-height: 1.6;
         }
 
-        /* 如果你有引用文字（比如 Oppenheimer 的那句），可以单独加一个类使用 Playfair */
+        /* 引用样式：用斜体来区分 */
         .quote-style {
-            font-family: var(--font-quote);
             font-style: italic;
-            font-size: 1.1em;
-            color: #000;
+            opacity: 0.9;
         }
 
+        /* 经历项 */
         .experience-item { margin-bottom: 30px; }
-        .exp-date { font-family: var(--font-mono); font-size: 11px; color: var(--accent-color); display: block; margin-bottom: 5px; }
-        .exp-title { font-family: var(--font-header); font-weight: 700; margin-bottom: 5px; display: block; color: #000; }
+        .exp-date { font-size: 11px; color: var(--accent-color); display: block; margin-bottom: 5px; }
+        .exp-title { font-weight: 700; margin-bottom: 5px; display: block; color: #000; }
 
-        ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-thumb { background: #ccc; }
+        /* 滚动条隐藏或极细 */
+        ::-webkit-scrollbar { width: 3px; }
+        ::-webkit-scrollbar-thumb { background: #ddd; }
     </style>
 
     
