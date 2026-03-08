@@ -4,86 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sun Boya | Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;700&family=Noto+Serif+SC:wght@300;400;700&display=swap" rel="stylesheet">
+
+
+  <style>
+    :root {
+        --bg-color: #fcfcfc;
+        --text-color: #1a1a1a;
+        --line-color: #e0e0e0;
+        --accent-color: #444444;
+        --font-mono: 'Inconsolata', monospace;
+        --font-zh: 'Noto Serif SC', serif;
+    }
+
+    body, html {
+        margin: 0; padding: 0; height: 100%;
+        background-color: var(--bg-color);
+        font-family: var(--font-mono);
+        font-size: 14px; line-height: 1.5; overflow: hidden;
+    }
+
+    /* 保持原有的三栏布局不变 */
+    .container { display: flex; height: 100vh; width: 100vw; }
+    .column { height: 100%; border-right: 1px solid var(--line-color); display: flex; flex-direction: column; }
+    .col-1 { flex: 0 0 22%; padding: 30px; }
+    .col-2 { flex: 0 0 53%; overflow-y: auto; padding: 30px; }
+    .col-3 { flex: 1; overflow-y: auto; padding: 30px; border-right: none; }
+
+    /* 文章标题与引文的错位排版 */
+    .article-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px; /* 中间的差距 */
+        margin: 15px 0;
+    }
+
+    .article-title {
+        flex: 0 0 45%; /* 标题占据左侧部分 */
+        font-size: 16px;
+        font-weight: 700;
+        color: #000;
+        line-height: 1.2;
+    }
+
+    .article-excerpt {
+        flex: 1; /* 引文占据右侧剩余空间 */
+        text-align: right; /* 引文靠右 */
+        font-size: 13px; /* 英文引文稍微缩小 */
+        color: #333;
+        font-style: italic;
+    }
+
+    /* 中文字体特殊处理 */
+    .zh-text {
+        font-family: var(--font-zh);
+        font-size: 12px; /* 中文字号比英文小 */
+        font-style: normal; /* 中文通常不斜体 */
+        line-height: 1.6;
+        text-align: justify;
+    }
+
+    .article-meta {
+        font-size: 10px;
+        color: var(--accent-color);
+        margin-top: 5px; /* 紧贴图片下方 */
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .photo-mount {
+        background-color: #ffffff; 
+        padding: 18px; 
+        border: 1px solid var(--line-color);
+        box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+</style>
+
     
-
-
-    <style>
-        :root {
-            --bg-color: #fcfcfc;
-            --text-color: #1a1a1a;
-            --line-color: #e0e0e0;
-            --accent-color: #444444; /* 深灰，保证易读 */
-            --font-mono: 'Inconsolata', monospace;
-        }
-
-        * { box-sizing: border-box; }
-
-        body, html {
-            margin: 0; padding: 0; height: 100%;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: var(--font-mono); /* 全部统一 */
-            font-size: 14px; 
-            line-height: 1.5; 
-            overflow: hidden;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* 布局逻辑完全保留 */
-        .container { display: flex; height: 100vh; width: 100vw; }
-        .column { height: 100%; border-right: 1px solid var(--line-color); display: flex; flex-direction: column; }
-        .col-1 { flex: 0 0 22%; padding: 30px; }
-        .col-2 { flex: 0 0 53%; overflow-y: auto; padding: 30px; }
-        .col-3 { flex: 1; overflow-y: auto; padding: 30px; border-right: none; }
-
-        /* 标题层级 */
-        h1 { font-size: 20px; font-weight: 700; margin: 0 0 40px 0; text-transform: uppercase; letter-spacing: 0.05em; }
-        h2 { 
-            font-size: 12px; font-weight: 400; margin: 0 0 30px 0; 
-            color: var(--accent-color); text-transform: uppercase; border-bottom: 1px solid var(--line-color); 
-            padding-bottom: 5px; letter-spacing: 0.1em;
-        }
-
-        /* 文章项目 */
-        .article-title { 
-            font-size: 16px; 
-            margin: 10px 0; 
-            font-weight: 700; 
-            color: #000; 
-            letter-spacing: -0.02em; /* 紧凑一点更有设计感 */
-        }
-        
-        .article-meta { 
-            font-size: 11px; 
-            color: var(--accent-color); 
-            margin-bottom: 10px; 
-            text-transform: uppercase;
-        }
-        
-        .article-excerpt { 
-            color: #333; 
-            text-align: justify; 
-            font-weight: 400;
-            line-height: 1.6;
-        }
-
-        /* 引用样式：用斜体来区分 */
-        .quote-style {
-            font-style: italic;
-            opacity: 0.9;
-        }
-
-        /* 经历项 */
-        .experience-item { margin-bottom: 30px; }
-        .exp-date { font-size: 11px; color: var(--accent-color); display: block; margin-bottom: 5px; }
-        .exp-title { font-weight: 700; margin-bottom: 5px; display: block; color: #000; }
-
-        /* 滚动条隐藏或极细 */
-        ::-webkit-scrollbar { width: 3px; }
-        ::-webkit-scrollbar-thumb { background: #ddd; }
-    </style>
-
     
 </head>
 <body>
@@ -99,12 +101,21 @@
             <br>
             <a href="https://www.instagram.com/sans_toit_/" target="_blank" style="color: black; text-decoration: underline;">Instagram</a>
         </div>
+
+           <br>
+           <br>
+        
         <div class="article-excerpt">
             Boya tient à rencontrer l'artiste comme on rencontre un ami.<br>
             <br>
             À travers ses recherches et ses textes, elle souhaite que le lecteur se sente plus proche de l’artiste et de son œuvre, comme s’ils venaient de passer tout un après-midi à se promener ensemble dans une forêt.<br>
         </div>
         <div class="divider"></div>
+
+
+           <br>
+           <br>
+
         <a href="mailto:hello@sunboya.fr" style="color: black; text-decoration: underline; text-transform: uppercase;">Contact</a>
     </div>
 
