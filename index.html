@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;700&family=Noto+Serif+SC:wght@300;400;700&display=swap" rel="stylesheet">
 
 
-  <style>
+<style>
     :root {
         --bg-color: #fcfcfc;
         --text-color: #1a1a1a;
@@ -20,71 +20,75 @@
         --font-zh: 'Noto Serif SC', serif;
     }
 
+    /* 基础文字设为居左、非斜体 */
     body, html {
         margin: 0; padding: 0; height: 100%;
         background-color: var(--bg-color);
         font-family: var(--font-mono);
-        font-size: 14px; line-height: 1.5; overflow: hidden;
+        font-size: 14px; line-height: 1.5; 
+        text-align: left; 
+        font-style: normal;
     }
 
-    /* 保持原有的三栏布局不变 */
+    /* 容器布局保持不变 */
     .container { display: flex; height: 100vh; width: 100vw; }
     .column { height: 100%; border-right: 1px solid var(--line-color); display: flex; flex-direction: column; }
-    .col-1 { flex: 0 0 22%; padding: 30px; }
     .col-2 { flex: 0 0 53%; overflow-y: auto; padding: 30px; }
-    .col-3 { flex: 1; overflow-y: auto; padding: 30px; border-right: none; }
 
-    /* 文章标题与引文的错位排版 */
+    /* --- 核心修复：左右分栏布局 --- */
     .article-header-row {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between; /* 撑开左右 */
         align-items: flex-start;
-        gap: 40px; /* 中间的差距 */
-        margin: 15px 0;
+        width: 100%;
+        margin: 15px 0 5px 0;
     }
 
+    /* 左侧标题：强制居左，加粗，非斜体 */
     .article-title {
-        flex: 0 0 45%; /* 标题占据左侧部分 */
-        font-size: 16px;
+        flex: 0 0 50%; /* 占据左边一半 */
+        font-size: 15px;
         font-weight: 700;
         color: #000;
-        line-height: 1.2;
+        text-align: left;
+        font-style: normal;
+        line-height: 1.3;
     }
 
+    /* 右侧引文：强制居右，斜体 */
     .article-excerpt {
-        flex: 1; /* 引文占据右侧剩余空间 */
-        text-align: right; /* 引文靠右 */
-        font-size: 13px; /* 英文引文稍微缩小 */
-        color: #333;
-        font-style: italic;
+        flex: 0 0 45%; /* 占据右边稍小部分 */
+        text-align: right; 
+        font-size: 13px;
+        color: #444;
+        font-style: italic; /* 只有这里是斜体 */
+        line-height: 1.4;
     }
 
-    /* 中文字体特殊处理 */
+    /* 下方中文：宋体，字号小 */
     .zh-text {
         font-family: var(--font-zh);
-        font-size: 12px; /* 中文字号比英文小 */
-        font-style: normal; /* 中文通常不斜体 */
-        line-height: 1.6;
+        font-size: 12px;
+        color: #555;
         text-align: justify;
+        font-style: normal;
+        margin-top: 8px;
+        width: 100%;
     }
 
     .article-meta {
         font-size: 10px;
         color: var(--accent-color);
-        margin-top: 5px; /* 紧贴图片下方 */
-        margin-bottom: 15px;
+        margin: 8px 0 15px 0;
         text-transform: uppercase;
-        letter-spacing: 0.05em;
     }
 
     .photo-mount {
         background-color: #ffffff; 
         padding: 18px; 
         border: 1px solid var(--line-color);
-        box-shadow: 0 1px 4px rgba(0,0,0,0.04);
     }
 </style>
-
     
     
 </head>
@@ -112,12 +116,18 @@
         </div>
         <div class="divider"></div>
 
-
-           <br>
-           <br>
-
-        <a href="mailto:hello@sunboya.fr" style="color: black; text-decoration: underline; text-transform: uppercase;">Contact</a>
-    </div>
+<div style="margin-top: 50px; padding-bottom: 20px;">
+    <br>
+    <a href="mailto:hello@sunboya.fr" 
+       style="color: black !important; 
+              text-decoration: underline; 
+              text-transform: uppercase; 
+              font-family: 'Inconsolata', monospace; 
+              font-size: 13px;
+              display: inline-block;">
+        Contact
+    </a>
+</div>
 
 <div class="column col-2">
     <h2>Projects</h2>
