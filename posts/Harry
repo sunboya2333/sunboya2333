@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris M&O : Rencontre avec Elizabeth Leriche | Sun Boya</title>
+    <style>
+        :root {
+            --bg-color: #fcfcfc;
+            --text-color: #1a1a1a;
+            --line-color: #e0e0e0;
+            --font-main: "Courier New", Courier, monospace;
+        }
+
+        body { margin: 0; background: var(--bg-color); font-family: var(--font-main); color: var(--text-color); line-height: 1.8; }
+        
+        /* 页面容器：控制最大宽度，保持阅读舒适度 */
+        .content-container { max-width: 800px; margin: 0 auto; padding: 80px 40px; }
+        
+        .back-link { text-decoration: none; color: #888; font-size: 12px; text-transform: uppercase; margin-bottom: 50px; display: block; border-bottom: 1px solid transparent; width: fit-content; transition: 0.3s; }
+        .back-link:hover { color: #000; border-bottom: 1px solid #000; }
+
+        h1 { font-size: 26px; font-weight: normal; margin: 30px 0; line-height: 1.3; }
+        h2 { font-size: 18px; font-weight: bold; margin: 60px 0 30px 0; text-transform: uppercase; letter-spacing: 0.1em; }
+
+        /* “纸感”图片容器 */
+        .photo-mount {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid var(--line-color);
+            margin: 50px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.03);
+        }
+        .photo-mount img { width: 100%; height: auto; display: block; }
+
+        /* 文章主体排版 */
+        .article-body { text-align: justify; font-size: 14px; }
+        
+        /* 导语部分 */
+        .intro-section { 
+            border-left: 1px solid var(--line-color); 
+            padding-left: 25px; 
+            margin: 40px 0; 
+            color: #666;
+            font-style: italic;
+        }
+
+        p { margin-bottom: 28px; }
+
+        .footer { margin-top: 100px; padding-top: 20px; border-top: 1px solid var(--line-color); font-size: 11px; color: #aaa; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="content-container">
+    <a href="../index.html" class="back-link">← Index</a>
+
+    <h1>Paris M&O : Rencontre avec Elizabeth Leriche</h1>
+    
+    <div class="article-body">
+        <div class="intro-section">
+            <p><strong>不隔着麦克风，现实中Harry Nuriev——这位M&O评选的2026年度设计师的声音，要比视频中的更不真实，很轻，像空气在振动，像席卷了周围的杂音。
+            <p>这和他的风格如出一辙，总有某种元素席卷整个空间。他为M&O展会设计的客厅，一切都被银色所覆盖，熙熙攘攘之中，恍若一个悬浮的异托邦。 </p>
+         
+        </div>
+
+        <div class="photo-mount">
+            <img src="../images/cover1.jpg" alt="M&O Cover">
+        </div>
+
+        <h2>Rencontrer Elizabeth Leriche</h2>
+        
+        <p>这极具辨识度的风格并非故意为之，但也并不偶然，它来自于一种我们非常熟悉的思维方式：联想。“对我而言，灵感源于对比（Juxtaposition）。我喜欢将看似不相干的事物组合在一起。”他会分享今天吃的西柚和充电线渐变色的一部分十分相似，他说，“我最喜欢的时刻，莫过于我的物品与我的服装出人意料地和谐共存。”他和Baccarat合作，收集了300支圆珠笔（笔芯被耐心地抽空以模仿水晶的质感），组成了新版的Zénith吊灯；他发现在卢浮宫观看玻璃中的文物，和在街上杂货店Lèche-vitrines（橱窗购物）的体验类似，于是，他便将这些世界级文物微缩成挂坠大小，邀请人们在钥匙串上整理自己的“馆藏”。</p>
+        <p>12年来，Nuriev用汽车前灯做灯、用袜子模拟鱼骨地板的形状，用旧T恤拼接窗帘，用锅盖做墙灯.....一个个事物获得新生，他也终于找到了那个可以代表他的词：“转化主义（Transformism）”。这种不发明新事物、仅转化已存物的创作方式，是他关于人类未来焦虑的回答：“我喜欢思考有一天，我们可能会面临原料短缺的问题，那时，我们将需要考虑如何为已有之物赋予新的用途（repurpose）。”在几个月前的巴塞尔艺术展，他在巴黎国立高等美术学院的小奥古斯丁教堂举行objets trouvé（失物招领）展览，邀请观众将自己的物件与正在展示的交换，“我希望来到这里的人能意识到，物品可以拥有不止一种生命。”展厅因此成为一个鲜活的交流平台，讲述人们如何消费、又如何舍弃的真实故事。</p>
+        <p>在这个信息爆炸的快餐年代，人们对一切都在失去耐心，Nuriev的作品不向观众索取注意力，他的语义是如此的集中，眨眼间，我们就好像已经消化掉整个空间的信息量。采访现场有记者选了一个尖锐的问题：“你会偏向观众来到这个地方呆半小时，还是只是五秒钟？”Nuriev的回应很温柔：“我欢迎大家来到这里，呆多久都好，这是观众自己的选择。”</p>
+        <p>王尔德说，艺术并不反映现实，而是反映观众。少有文章会对Nuriev的空间进行视觉还原，就好像那没什么细节好描述。可是，单一何尝不是另一种混乱呢？当一切都是银色，我们就不得不停下来，聚精会神地瞧瞧这到底是什么。这个看起来像是陀螺的小玩意，仔细一琢磨，才发现是厨房水槽的过滤器。——是的，我们甚至都没有注意过这个物件儿的名字是什么。因为我们看到了，就以为自己已经看完了。</p>
+        <p>Nuriev很清楚，他的作品不实用，而是有关感受，键盘显然不是令人舒适的坐具，但他觉得，和手工艺相比，键盘更容易和我们产生共鸣。“我不认为自己是一位优秀的设计师，设计是基于人体工程学的考量。我的作品是艺术。当我着手一个项目时，我最关心的是我想要传达的信息。”</p>
+        <p>什么是好品味？什么是废旧品？Nuriev真正设计的，是一种新的价值观，乃至一种人生态度。和Balenciaga的合作，他把所有archive不强调任何主次一并装入透明塑料沙发套中：“你不需要特地强调任何一部分，为你的所有过去而骄傲吧，并且骄傲着带着所有的过去，走向未来。”</p>
+        </p>
+
+        
