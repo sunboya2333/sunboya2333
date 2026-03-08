@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traduction : La Pierre qui Pousse | Sun Boya</title>
+    <style>
+        :root {
+            --bg-color: #fcfcfc;
+            --text-color: #1a1a1a;
+            --line-color: #e0e0e0;
+            --font-main: "Courier New", Courier, monospace;
+            /* PDF 颜色还原 */
+            --pdf-yellow: #fff3b0; /* 黄色高亮 */
+            --pdf-green: #d4edda;  /* 绿色高亮 */
+            --pdf-red: #d9534f;    /* 红色文字 */
+        }
+
+        body { margin: 0; background: var(--bg-color); font-family: var(--font-main); color: var(--text-color); line-height: 1.8; }
+        .content-container { max-width: 850px; margin: 0 auto; padding: 60px 40px; }
+        .back-link { text-decoration: none; color: #888; font-size: 12px; text-transform: uppercase; margin-bottom: 40px; display: block; transition: 0.3s; }
+        .back-link:hover { color: #000; }
+
+        h1 { font-size: 24px; font-weight: normal; border-bottom: 1px solid var(--line-color); padding-bottom: 20px; margin-bottom: 40px; }
+
+        /* 颜色标注标签 */
+        .hl-y { background-color: var(--pdf-yellow); padding: 2px 2px; }
+        .hl-g { background-color: var(--pdf-green); padding: 2px 2px; }
+        .txt-r { color: var(--pdf-red); font-weight: bold; }
+
+        /* 翻译对照区域 */
+        .translation-block {
+            background: #fff;
+            border: 1px solid var(--line-color);
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+        }
+
+        .original-text { color: #666; font-style: italic; margin-bottom: 20px; border-bottom: 1px dashed var(--line-color); padding-bottom: 20px; }
+        .my-translation { color: var(--text-color); }
+
+        .analysis-note { font-size: 13px; color: #777; margin-top: 50px; border-top: 1px solid var(--line-color); padding-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="content-container">
+    <a href="../index.html" class="back-link">← Back to Index</a>
+
+    <h1>Devoir : Traduction de Albert Camus</h1>
+
+    <div class="article-body">
+        
+        <div class="translation-block">
+            <div class="original-text">
+                "La <span class="hl-y">pierre qui pousse</span>, c'est l'histoire d'un homme qui, au milieu d'une nature exubérante..."
+            </div>
+            <div class="my-translation">
+                《生长的石头》讲述了一个男人在茂密的自然景观中…… <span class="txt-r">(此处对应你的红色标注点)</span>
+            </div>
+        </div>
+
+        <div class="translation-block">
+            <div class="original-text">
+                "Il entendait <span class="hl-g">le bruit du fleuve</span> et l'appel des oiseaux."
+            </div>
+            <div class="my-translation">
+                他听见了大河的低吟与飞鸟的呼唤。<span class="hl-g">(保留感官经验的节奏感)</span>
+            </div>
+        </div>
+
+        <div class="analysis-note">
+            <p><strong>Notes d'analyse :</strong></p>
+            <p>1. <span class="hl-y">黄色部分</span>：代表文本中的感官经验捕捉。</p>
+            <p>2. <span class="hl-g">绿色部分</span>：代表翻译中的节奏感与音乐性。</p>
+            <p>3. <span class="txt-r">红色文字</span>：标注出 1986 年旧译本中需要修正的词汇。</p>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
