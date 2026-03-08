@@ -74,8 +74,26 @@
     
     <a href="mo2025.html" style="text-decoration: none; color: inherit;">
         <div class="article-card">
-            <div style="width: 100%; margin-bottom: 15px;">
-                <img src="images/cover1.jpg" alt="M&O 2025 Cover" style="width: 100%; height: auto; display: block; border: 1px solid var(--line-color);">
+            
+            <div style="
+                width: 100%;
+                background-color: #fff; /* 纯白，作为纸张底色 */
+                padding: 15px; /* 图片和线框之间的距离 */
+                border: 1px solid var(--line-color); /* 极细的外边框 */
+                margin-bottom: 20px; /* 卡片下方的间距 */
+                /* 加入微小的阴影，增加实体感 */
+                box-shadow: 0 1px 3px rgba(0,0,0,0.05); 
+                transition: transform 0.3s ease; /* 增加鼠标悬停效果（可选） */
+                " 
+                class="photo-mount">
+                
+                <img src="images/cover1.jpg" alt="M&O 2025 Cover" style="
+                    width: 100%; 
+                    height: auto; 
+                    display: block; 
+                    /* 给图片加上极细的内边框，更显精致 */
+                    border: 1px solid rgba(0,0,0,0.05); 
+                ">
             </div>
             
             <div class="article-title">1. 鉴往知来：PAST REVEALS FUTURE</div>
