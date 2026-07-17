@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun Boya | Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;700&display=swap" rel="stylesheet">
+
+    
+<style>
+        :root {
+            --bg-color: #fcfcfc;
+            --text-color: #1a1a1a;
+            --line-color: #e0e0e0;
+            --accent-color: #444444; /* 深灰，保证易读 */
+            --font-mono: 'Inconsolata', monospace;
+        }
+
+        * { box-sizing: border-box; }
+
+        body, html {
+            margin: 0; padding: 0; height: 100%;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-mono); /* 全部统一 */
+            font-size: 14px; 
+            line-height: 1.5; 
+            overflow: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 布局逻辑完全保留 */
+        .container { display: flex; height: 100vh; width: 100vw; }
+        .column { height: 100%; border-right: 1px solid var(--line-color); display: flex; flex-direction: column; }
+        .col-1 { flex: 0 0 22%; padding: 30px; }
+        .col-2 { flex: 0 0 53%; overflow-y: auto; padding: 30px; }
+        .col-3 { flex: 1; overflow-y: auto; padding: 30px; border-right: none; }
+
+        /* 标题层级 */
+        h1 { font-size: 20px; font-weight: 700; margin: 0 0 40px 0; text-transform: uppercase; letter-spacing: 0.05em; }
+        h2 { 
+            font-size: 12px; font-weight: 400; margin: 0 0 30px 0; 
+            color: var(--accent-color); text-transform: uppercase; border-bottom: 1px solid var(--line-color); 
+            padding-bottom: 5px; letter-spacing: 0.1em;
+        }
+
+        /* 文章项目 */
+        .article-title { 
+            font-size: 16px; 
+            margin: 10px 0; 
+            font-weight: 700; 
+            color: #000; 
+            letter-spacing: -0.02em; /* 紧凑一点更有设计感 */
+        }
+        
+        .article-meta { 
+            font-size: 11px; 
+            color: var(--accent-color); 
+            margin-bottom: 10px; 
+            text-transform: uppercase;
+        }
+        
+        .article-excerpt { 
+            color: #333; 
+            text-align: justify; 
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        /* 引用样式：用斜体来区分 */
+        .quote-style {
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        /* 经历项 */
+        .experience-item { margin-bottom: 30px; }
+        .exp-date { font-size: 11px; color: var(--accent-color); display: block; margin-bottom: 5px; }
+        .exp-title { font-weight: 700; margin-bottom: 5px; display: block; color: #000; }
+
+        /* 滚动条隐藏或极细 */
+        ::-webkit-scrollbar { width: 3px; }
+        ::-webkit-scrollbar-thumb { background: #ddd; }
+    </style>
+
+
+
+    
+</head>
+<body>
+
+<div class="container">
+
+    <div class="column col-1">
+        <h1>Sun Boya</h1>
+        <div class="divider"></div>
+        <div class="profile-section">
+            <p>PROFILE</p>
+            <a href="mailto:hello@sunboya.fr" style="color: black; text-decoration: none;">hello@sunboya.fr</a>
+            <br>
+            <a href="https://www.instagram.com/sans_toit_/" target="_blank" style="color: black; text-decoration: underline;">Instagram</a>
+        </div>
+        <div class="article-excerpt">
+             <br>
+            
+            <p>
+                Au cœur de la littérature, ce n’est pas écrire, mais comprendre. </p>
+      
+           
+        </div>
+        <div class="divider"></div>
+        <a href="mailto:hello@sunboya.fr" style="color: black; text-decoration: underline; text-transform: uppercase;">Contact</a>
+    </div>
+
+<div class="column col-2">
+    <h2>Projects</h2>
+
+  
+  <a href="posts/song-dong.html" style="text-decoration: none; color: inherit; display: block; margin-top: 40px;">
+<div class="article-card" style="cursor: pointer;">
+        
+        <div style="
+            width: 100%;
+            background-color: #ffffff; 
+            padding: 18px; 
+            border: 1px solid var(--line-color); 
+            margin-bottom: 25px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04); 
+            " 
+            class="photo-mount">
+            
+            <img src="images/songdong-cover.jpg" alt="Song Dong Paris" style="
+                width: 100%; 
+                height: auto; 
+                display: block; 
+                border: 1px solid rgba(0,0,0,0.02); 
+            ">
+        </div>
+        
+        <div class="article-title" style="letter-spacing: 0.03em; font-size: 15px; font-weight: bold; margin-bottom: 8px;">
+            宋冬在巴黎：一座会被吃掉的城市
+        </div>
+        
+        <div class="article-meta" style="font-size: 11px; color: var(--accent-color); margin-bottom: 12px; opacity: 0.8;">
+            Art | Concept | AD China No.164
+        </div>
+        
+        <p class="article-excerpt" style="line-height: 1.6; text-align: justify;">
+            以艺术家身份化身杜尚，在巴黎乐蓬马歇百货推出观念艺术装置，探讨艺术与生活的无界融合。
+        </p>
+    </div>
+</a>
+
+  <a href="brief-AD work-Boya.pdf" target="_blank" style="text-decoration: none; color: inherit; display: block; margin-top: 40px;">
+<div class="article-card" style="cursor: pointer;">
+        
+        <div style="
+            width: 100%;
+            background-color: #ffffff; 
+            padding: 18px; 
+            border: 1px solid var(--line-color); 
+            margin-bottom: 25px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04); 
+            " 
+            class="photo-mount">
+            
+            <img src="images/ADsyn.png" alt="brief-AD work-Boya.pdf" style="
+                width: 100%; 
+                height: auto; 
+                display: block; 
+                border: 1px solid rgba(0,0,0,0.02); 
+            ">
+        </div>
+        
+        <div class="article-title" style="letter-spacing: 0.03em; font-size: 15px; font-weight: bold; margin-bottom: 8px;">
+            Visual projects : AD Select, AD solution, AD Exhibitions, Posters
+        </div>
+        
+        <div class="article-meta" style="font-size: 11px; color: var(--accent-color); margin-bottom: 12px; opacity: 0.8;">
+            Style | Composition & couleur | PDF
+
+        </div>
+        
+        <p class="article-excerpt" style="line-height: 1.6; text-align: justify;">
+           Mon travail sur la rubrique AD Select chez Architectural Digest China m’a permis 
+            de développer une sensibilité particulière à la manière dont la couleur, 
+            les matériaux, les formes et les proportions contribuent à la construction d’un style.    <br>
+            La rubrique AD Solutions a renforcé ma capacité à différencier et à mettre en 
+            valeur différentes approches du design d’intérieur autour d’un même thème.    <br>
+            Enfin, la préparation des annonces d’expositions a développé mes compétences 
+            en recherche d’information, synthèse rédactionnelle et sélection d’images.  <br>
+        </p>
+    </div>
+</a>
+
+
+
+        
+
+    
+    <a href="posts/Elizabeth.html" style="text-decoration: none; color: inherit; display: block;">
+        <div class="article-card" style="cursor: pointer;">
+            
+            <div style="
+                width: 100%;
+                background-color: #ffffff; 
+                padding: 18px; 
+                border: 1px solid var(--line-color); 
+                margin-bottom: 25px;
+                box-shadow: 0 1px 4px rgba(0,0,0,0.04); 
+                transition: all 0.3s ease;
+                " 
+                class="photo-mount">
+                
+                <img src="images/cover1.jpg" alt="M&O 2025 Cover" style="
+                    width: 100%; 
+                    height: auto; 
+                    display: block; 
+                    border: 1px solid rgba(0,0,0,0.02); 
+                ">
+            </div>
+            
+            <div class="article-title" style="letter-spacing: 0.03em; font-size: 15px; font-weight: bold; margin-bottom: 8px;">
+                Jan. 2026 | Paris M&O : Rencontre avec Elizabeth Leriche
+            </div>
+            
+            <div class="article-meta" style="font-size: 11px; color: var(--accent-color); margin-bottom: 12px; opacity: 0.8;">
+                AD China | Maison & Objet 2026 | Exhibition Analysis
+            </div>
+            
+            <p class="article-excerpt" style="line-height: 1.6; text-align: justify;">
+                Dotée d’un regard particulièrement aiguisé pour les détails qui font toute la différence, Leriche est, pour de nombreux designers et marques, celle dont le choix signifie être véritablement « vu ».
+            </p>
+        </div>
+    </a>
+
+
+
+
+
+
+
+    
+    <a href="posts/Harry.html" style="text-decoration: none; color: inherit; display: block; margin-top: 40px;">
+    <div class="article-card" style="cursor: pointer;">
+        
+        <div style="
+            width: 100%;
+            background-color: #ffffff; 
+            padding: 18px; 
+            border: 1px solid var(--line-color); 
+            margin-bottom: 25px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04); 
+            transition: all 0.3s ease;
+            " 
+            class="photo-mount">
+            
+                    <img src="images/cover2.png" alt="Harry Nuriev Cover" style="
+                    width: 100%; 
+                    height: auto; 
+                    display: block; 
+                    border: 1px solid rgba(0,0,0,0.02); 
+                ">
+        </div>
+
+        <div class="article-title" style="letter-spacing: 0.03em; font-size: 15px; font-weight: bold; margin-bottom: 8px;">
+            Jan. 2026 | Designer of the Year 2026 | Harry Nuriev : Be proud of all parts of your past
+        </div>
+        
+        <div class="article-meta" style="font-size: 11px; color: var(--accent-color); margin-bottom: 12px; opacity: 0.8;">
+                AD China | Maison & Objet 2026 | Special Feature
+        </div>
+        
+        <p class="article-excerpt" style="line-height: 1.6; text-align: justify;">
+            "My creative process doesn’t begin with a blank page - it begins with the world as it already is. I enter a space, a context, a reality. And I choose. I listen to what speaks to me, what moves me, what already holds meaning. I don’t erase its past; I amplify its essence."
+        </p>
+    </div>
+</a>
+
+    <a href="posts/Thomas.html" style="text-decoration: none; color: inherit; display: block; margin-top: 40px;">
+    <div class="article-card" style="cursor: pointer;">
+        
+        <div style="
+            width: 100%;
+            background-color: #ffffff; 
+            padding: 18px; 
+            border: 1px solid var(--line-color); 
+            margin-bottom: 25px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04); 
+            transition: all 0.3s ease;
+            " 
+            class="photo-mount">
+            
+                    <img src="images/curatio_under25mb.jpg" alt="Thomas Haarmann Cover" style="
+                    width: 100%; 
+                    height: auto; 
+                    display: block; 
+                    border: 1px solid rgba(0,0,0,0.02); 
+                ">
+        </div>
+        
+        <div class="article-title" style="letter-spacing: 0.03em; font-size: 15px; font-weight: bold; margin-bottom: 8px;">
+            Jan. 2026 | Thomas Haarmann : le minimalisme, une soustraction précise.
+        </div>
+        
+        <div class="article-meta" style="font-size: 11px; color: var(--accent-color); margin-bottom: 12px; opacity: 0.8;">
+                AD China | Maison & Objet 2026 | Special Feature
+        </div>
+        
+        <p class="article-excerpt" style="line-height: 1.6; text-align: justify;">
+            “Je ne cherche pas l’accord parfait entre toutes les pièces.Ce qui m’intéresse, ce sont ces moments légèrement inattendus, mais qui conservent malgré tout une forme de cohérence : cette tension m’est essentielle.”
+        </p>
+    </div>
+</a>
+
+    </a>
+
+
+
+
+
+ <a href="zola-sunboya.pdf" target="_blank" style="text-decoration: none; color: inherit; display: block; margin-top: 40px;">
+    <div class="article-card" style="cursor: pointer;">
+        
+        <div style="
+            width: 100%;
+            background-color: #ffffff; 
+            padding: 18px; 
+            border: 1px solid var(--line-color); 
+            margin-bottom: 25px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04); 
+            " 
+            class="photo-mount">
+            
+            <img src="images/Zola.jpg" alt="zola PDF" style="
+                width: 100%; 
+                height: auto; 
+                display: block; 
+                border: 1px solid rgba(0,0,0,0.02); 
+            ">
+        </div>
+        
+        <div class="article-title" style="letter-spacing: 0.03em; font-size: 15px; font-weight: bold; margin-bottom: 8px;">
+            Mai. 2025 | Libérer les nerfs : Zola, Manet et la fondation sensorielle de l’art moderne
+        </div>
+        
+        <div class="article-meta" style="font-size: 11px; color: var(--accent-color); margin-bottom: 12px; opacity: 0.8;">
+            Academic Work | Littérature Comparée | PDF
+
+        </div>
+        <p class="article-excerpt" style="line-height: 1.6; text-align: justify;">
+            Partant des articles critiques de Zola consacrés à Manet, ce mini-mémoire tente de mettre en 
+lumière un point de bascule méthodologique dans l’histoire de l’art moderne. En exaltant la 
+primauté de la forme dans la peinture de Manet, Zola ne se contente pas d’appuyer une révolution 
+esthétique : il formule une esthétique moderne centrée sur la perception. Ce geste critique irrigue 
+également sa propre pratique naturaliste.  <br>
+            <br>
+           À nos yeux contemporains, cette orientation ne relève pas 
+seulement d’un tournant dans l’histoire de l’art : elle trouve aujourd’hui un écho inattendu dans 
+certains fondements de la neuro-esthétique.
+        </p>
+    </div>
+</a>
+
+
+
+
+
+    
+
+        <a href="posts/nezha.html" style="text-decoration: none; color: inherit; display: block;">
+        <div class="article-card" style="cursor: pointer;">
+            
+            <div style="
+                width: 100%;
+                background-color: #ffffff; 
+                padding: 18px; 
+                border: 1px solid var(--line-color); 
+                margin-bottom: 25px;
+                box-shadow: 0 1px 4px rgba(0,0,0,0.04); 
+                transition: all 0.3s ease;
+                " 
+                class="photo-mount">
+                
+                <img src="images/nezha.jpeg" alt="nezha" style="
+                    width: 100%; 
+                    height: auto; 
+                    display: block; 
+                    border: 1px solid rgba(0,0,0,0.02); 
+                ">
+            </div>
+            
+            <div class="article-title" style="letter-spacing: 0.03em; font-size: 15px; font-weight: bold; margin-bottom: 8px;">
+                Avril. 2025 | Quand le récit devient une coquille : une observation de l’écologie culturelle à partir de Ne Zha 2
+            </div>
+            
+            <div class="article-meta" style="font-size: 11px; color: var(--accent-color); margin-bottom: 12px; opacity: 0.8;">
+                Culture Study | publié dans la revue académique chinoise Chuangzuo Pingtan (创作评谭).
+            </div>
+            
+            <p class="article-excerpt" style="line-height: 1.6; text-align: justify;">
+                <p> Cet article analyse le phénomène cinématographique <em>Ne Zha 2</em>, 
+                    devenu le film d’animation ayant réalisé le plus grand succès au box-office mondial 
+                    seulement vingt-deux jours après sa sortie.  </p>
+            <p> En mobilisant les apports des neurosciences, 
+            il examine la manière dont le film s’inscrit dans la culture populaire contemporaine, 
+            structurée par les réseaux sociaux, les jeux vidéo et les médias numériques, 
+            à travers le médium de la culture traditionnelle chinoise.  </p>
+           
+                
+            </p>
+        </div>
+    </a>
+
+
+
+
+    <a href="SUNBoya-Devoir-Traduction.pdf" target="_blank" style="text-decoration: none; color: inherit; display: block; margin-top: 40px;">
+    <div class="article-card" style="cursor: pointer;">
+        
+        <div style="
+            width: 100%;
+            background-color: #ffffff; 
+            padding: 18px; 
+            border: 1px solid var(--line-color); 
+            margin-bottom: 25px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04); 
+            " 
+            class="photo-mount">
+            
+            <img src="images/p2922934449.webp" alt="Traduction Camus PDF" style="
+                width: 100%; 
+                height: auto; 
+                display: block; 
+                border: 1px solid rgba(0,0,0,0.02); 
+            ">
+        </div>
+        
+        <div class="article-title" style="letter-spacing: 0.03em; font-size: 15px; font-weight: bold; margin-bottom: 8px;">
+            Dec. 2024 | Pouvez-vous entendre la musique ? - Lecture traductologique de la traduction chinoise de La Pierre qui pousse d’Albert Camus
+        </div>
+        
+        <div class="article-meta" style="font-size: 11px; color: var(--accent-color); margin-bottom: 12px; opacity: 0.8;">
+            Academic Work | Littérature Comparée | Travail de traductologie en PDF
+
+        </div>
+        
+        <p class="article-excerpt" style="line-height: 1.6; text-align: justify;">
+            « L’algèbre, c’est comme une partition... Pouvez-vous entendre la musique Robert ? » <br>
+            <span style="display: block; text-align: right; font-style: italic; font-size: 0.9em;">- Oppenheimer</span> <br>
+            Après avoir analysé et comparé les deux traductions du passage classique de La pierre qui pousse de 
+Camus à travers la perspective théorique de Giovanni Pascoli sur la distinction entre un traducteur 
+et un interprète, je me suis rappelé cette citation d’Oppenheimer.
+        </p>
+    </div>
+</a>
+    
+    
+        <a href="posts/sophie.html" style="text-decoration: none; color: inherit; display: block; margin-top: 40px;">
+    <div class="article-card" style="cursor: pointer;">
+        
+        <div style="
+            width: 100%;
+            background-color: #ffffff; 
+            padding: 18px; 
+            border: 1px solid var(--line-color); 
+            margin-bottom: 25px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04); 
+            transition: all 0.3s ease;
+            " 
+            class="photo-mount">
+            
+                    <img src="images/sophiecalle.webp" alt="sophie Cover" style="
+                    width: 100%; 
+                    height: auto; 
+                    display: block; 
+                    border: 1px solid rgba(0,0,0,0.02); 
+                ">
+        </div>
+        
+        <div class="article-title" style="letter-spacing: 0.03em; font-size: 15px; font-weight: bold; margin-bottom: 8px;">
+            Dec. 2023 | Sophie Calle, Suite Vénitienne : Un corps utopique dans la filature
+        </div>
+        
+        <div class="article-meta" style="font-size: 11px; color: var(--accent-color); margin-bottom: 12px; opacity: 0.8;">
+                Paris 1 Sorbonne | Esthétique | Travail de Philosophie
+        </div>
+        
+        <p class="article-excerpt" style="line-height: 1.6; text-align: justify;">
+           Elle s’épanouit sa vie, en effaçant sa vie. <br>
+            “L’ailleurs” n’est pas ailleurs, il est ICI.
+        </p>
+    </div>
+</a>
+
+
+    
+
+
+
+   
+        
+
+
+
+    
+</div>
+
+    <div class="column col-3">
+        <h2>Réflexions</h2>
+        <div class="experience-item">
+            <span class="exp-date">2026</span>
+            <span class="exp-title">Les ponts de l’entretien</span>
+            <p class="article-excerpt">
+
+                 <!-- 博雅看重将艺术家当朋友一样去认识。 -->  
+            Boya tient à rencontrer l'artiste comme on rencontre un ami.<br>
+            <br>
+
+                 <!-- 在读过她的文字后，她希望读者可以感受到和艺术家更亲近了，就好像他们刚刚在森林里一起散步了一下午一样。 -->
+           
+                À travers ses textes, elle souhaite que le lecteur se sente plus proche de l’artiste 
+            et de son œuvre, comme s’ils venaient de passer tout un après-midi à se promener ensemble dans une forêt.<br>
+                 <br>
+                 <br> 
+                 <br> 
+
+            <!-- 每一个采访问题都是记者在努力理解被采访人时所建造的桥，
+                只是，桥送过去之后，一个真诚的被采访人可能会带你去到一个完全想不到的地方，
+                这是被采访人的桥，这个桥，记者必须以最开放的心智和最温柔的同情接过来，
+                才有跨越几乎不可能跨越的主观性偏见，让采访真正发挥它的意义：建造令人类走出个体的孤独，走向他人的巴别塔。 -->
+             
+          
+            <p> Chaque question d’entretien est un pont que le journaliste construit pour tenter de comprendre la personne interrogée. Mais une fois ce pont envoyé,un interlocuteur sincère peut vous conduire vers un endroit totalement inattendu.</p>
+            <p> C’est alors le pont construit par l’interviewé. Et ce pont, le journaliste doit l’accueillir avec l’esprit le plus ouvert et la sympathie la plus délicate, afin de franchir le fossé presque infranchissable des biais subjectifs. </p>
+            <p> Alors seulement l’entretien peut accomplir son véritable sens : construire une Babel où l’être humain sort de sa solitude individuelle pour aller vers l’autre. </p>
+            
+            <!-- 采访不是试卷上的一问一答，在采访中，追问总是要随答案转换，对方的答案是记者深入了解他的台阶，引导记者问出并没有事先准备的问题。
+                在这样的循环中，两个人的相识，也才能从浮于表象的已知，走向共同探索的未知。 -->
+      
+        
+            <p> Un entretien n’est pas un simple jeu de questions et réponses comme sur une feuille d’examen. Dans un entretien, les relances se transforment toujours au fil des réponses.</p>
+            <p> Les réponses de l’interlocuteur deviennent des marches qui permettent au journaliste d’approfondir sa compréhension, et l’amènent à poser des questions qui n’étaient pas préparées à l’avance.
+            <p> Dans ce mouvement circulaire, la rencontre entre deux personnes peut alors passer d’un savoir superficiellement connu à une exploration commune de l’inconnu.</p>
+            
+            <!-- 文学的本领是修复“restaurer”。是把那些潜意识层面的东西转换成意识层面的，把它说清楚。是大致清楚地看到一个人从哪里来的怎么走到这里的。很多取得商业成功的人的直觉快狠准。在机会来临时果断出击，正确决策，但是如果问他为什么，其实往往是直觉，而直觉是潜意识层面的，说不清，但就是感觉很准。擅长文学的人在事件发生的当下是混乱的，一时之间并不知道发生了什么，直觉往往受主观影响，而且因为收到了多方信息因此视线紊乱，但是，事件发生之后能够闪回、复刻、分析所有发生过的细节。
+文学是记录者。文学明白同样的意思十个字和两个字背后不同的情绪，以及如何雕琢它们，综合它们，使其更具原型的代表性。 -->
+          
+            <p>Le véritable pouvoir de la littérature est de restaurer.
+            <p>Restaurer, c’est faire passer ce qui appartient à l’inconscient vers le domaine de la conscience, le rendre dicible, le clarifier. C’est parvenir, au moins partiellement, à comprendre d’où vient une personne et comment elle est arrivée là.</p>
+
+            <p>Beaucoup de ceux qui réussissent dans le monde commercial s’appuient sur une intuition rapide, tranchante et efficace. Lorsque l’occasion se présente, ils agissent avec décision et font les bons choix. Mais si on leur demande pourquoi, la réponse reste souvent vague : 
+                c’est une intuition. L’intuition relève de l’inconscient - elle est difficile à formuler, même si elle semble juste.</p>
+
+            <p> À l’inverse, ceux qui ont une sensibilité littéraire peuvent être dans la confusion au moment même où les événements se produisent. Ils ne comprennent pas immédiatement ce qui se passe ; leur perception est brouillée par la multiplicité des informations et par la subjectivité de leur regard. Mais, après coup, ils sont capables de revenir en arrière, de reconstruire, 
+                de rejouer et d’analyser avec précision les détails de ce qui a eu lieu.</p>
+            <p>La littérature est une forme d’enregistrement. Elle sait que dire une chose en dix mots ou en deux ne cache pas la même émotion. 
+                Elle travaille ces mots, les affine, les assemble, afin de leur donner une portée plus essentielle, presque archétypale.</p>
+        </div>
+    </div>
+
+</div> </body>
+</html>
