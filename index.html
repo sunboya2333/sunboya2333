@@ -119,10 +119,12 @@
 
 <style>
 .cv-download {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 18px;
-  padding: 10px 0;
+  width: 100%;
+  padding: 10px 0 18px;
   color: inherit;
   font-size: 13px;
   text-decoration: none;
@@ -133,12 +135,27 @@
 .cv-download:hover {
   opacity: .55;
 }
+
+.profile-contact {
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.profile-contact a {
+  color: black;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
 </style>
-   
-        </div>
-        <div class="divider"></div>
-        <a href="mailto:hello@sunboya.fr" style="color: black; text-decoration: underline; text-transform: uppercase;">Contact</a>
-    </div>
+
+
+
+            
+<div class="profile-contact">
+  <a href="mailto:hello@sunboya.fr">Contact</a>
+</div>
+
+  
 
 <div class="column col-2">
     <h2>Projects</h2>
